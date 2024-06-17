@@ -2,7 +2,7 @@
 exports = function({ query, headers, body}, response) {
   const db = context.services.get("mongodb-atlas").db("your_database_name");
   const collection = db.collection("your_collection_name");
-  const book = collection.findOne0({title: "Something Like Home"});
+  const book = collection.findOne({title: "Something Like Home"});
 
   if (book)
     return book 
